@@ -80,19 +80,3 @@ In this case, the tool will simply output your existing details for your review.
 ### Running the script
 
 Run the following command from the root of this repository: `./github_setup.sh`.
-
-### Automated github_setup.sh execution at login
-
-This section is intended for CFPB Mac Engineering's automation of
-the `github_setup.sh` script on new Macs.
-
-1. Place the file `github_setup.sh` at the location
-   `/usr/local/bin/github_setup.sh`.
-   - Make sure the file is world executable:
-   `chmod +x /usr/local/bin/github_setup.sh`.
-1. Place the file `org.cfpb.github_setup.plist` at the location
-   `/Users/<username>/Library/LaunchAgents/org.cfpb.github_setup.plist`
-   for the user(s) on the computer.
-   - This will spawn the `github_setup.sh` script when the user logs on.
-   - Once the user has completed the process, the plist will be disabled
-     to stop future login execution.
